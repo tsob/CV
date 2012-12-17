@@ -1,7 +1,7 @@
 CV
 ==
 
-Tim O'Brien's' CV/résumé
+Tim O'Brien's CV/résumé
 
 
 This work may be distributed and/or modified under the
