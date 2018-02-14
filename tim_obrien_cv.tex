@@ -1,4 +1,4 @@
-% Tim O'Brien CV/résumé ~ Dec 2012
+% Tim O'Brien CV/résumé ~ Feb 2018
 %
 % Adapted from moderncv template.tex
 % Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
@@ -7,87 +7,189 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[10pt,letterpaper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,letterpaper,roman,final]{moderncv}
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size
+% ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
+% 'landscape') and font family ('sans' and 'roman')
 
 
-% moderncv themes
-\moderncvstyle{banking}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% ModernCV themes -------------------------------------------------------------
+% Style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}
+% Color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey'
+% and 'black'
+\moderncvcolor{black}
+% Name size
+\renewcommand*{\namefont}{\fontsize{22}{26}\mdseries\upshape}
+% \renewcommand*{\namefont}{\fontsize{22}{40}\mdseries\upshape}
 
-% adjust the page margins
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% Adjust the page margins
 \usepackage[scale=0.84]{geometry}
+\recomputelengths
 
 % personal data
 \firstname{Timothy}
 \familyname{O'Brien}
-\address{119 Quillen Ct. \#1213}{Stanford, CA 94305}
+% \address{3133 Frontera Way \#413}{Burlingame, CA 94010}
+\address{3133 Frontera Way, Apt. 413, Burlingame, CA 94010}{}
 
-\mobile{+1~(917)~280~4532}
+\mobile{(917)~280-4532}
 \email{tsob@ccrma.stanford.edu}
-\homepage{tsobrien.com}
+\homepage{ccrma.stanford.edu/\textasciitilde tsob}
 
-%----------------------------------------------------------------------------------
+% Remove emoji
+\renewcommand*{\addresssymbol}       {}
+\renewcommand*{\mobilephonesymbol}   {}
+\renewcommand*{\fixedphonesymbol}    {}
+\renewcommand*{\faxphonesymbol}      {}
+\renewcommand*{\emailsymbol}         {}
+\renewcommand*{\homepagesymbol}      {}
+\renewcommand*{\linkedinsocialsymbol}{}
+\renewcommand*{\twittersocialsymbol} {}
+\renewcommand*{\githubsocialsymbol}  {}
+
+%------------------------------------------------------------------------------
 %            content
-%----------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 \begin{document}
-%-----       resume       ---------------------------------------------------------
+% Resume ----------------------------------------------------------------------
 \makecvtitle
 \vspace{-22px}
-\section{Education}
-\cventry{September 2014--June 2019 (expected)}{Ph.D.}{Stanford University}{Stanford, California}{\textit{Computer-Based Music Theory and Acoustics}}{Recently admitted as one of two incoming Ph.D. students at the \textit{Center for Computer Research in Music and Acoustics.}}
 
-\cventry{September 2012--June 2014 (expected)}{M.A.}{\vspace*{-14pt} }{}{\textit{Music, Science and Technology}}{Two-year Masters program at the \textit{Center for Computer Research in Music and Acoustics}.
+\section{Education} % ---------------------------------------------------------
+
+\cventry
+{Sep.\ 2014--\textit{present}}
+{Ph.D.}
+{Stanford University}
+{Stanford, CA}
+{\textit{Computer-Based Music Theory and Acoustics}}
+{\begin{itemize}
+   \item Research focuses on deep learning applied to musical applications.
+         Advised by Prof.\ Julius O.\ Smith, III. All coursework completed.
+   \item Helped develop and teach \textit{Music 421N: Deep Learning for
+         Music and Audio}.
+   \item Instructor for introductory computer music composition class;
+         served as teaching assistant for six courses.
+ \end{itemize}}
+
+\cventry
+{Sep.\ 2012--Apr.\ 2014}
+{M.A.}
+{Stanford University}
+{Stanford, CA}
+{\textit{Music, Science and Technology -- Center for Computer Research in Music
+ and Acoustics}}
+ \begin{itemize}
+   \item GPA: 4.116
+   \item Studies included digital signal processing, computer music
+         composition, and human-computer interaction design.
+   \item Research included complex system simulation for computer
+         improvisation and real-time generative algorithmic composition.
+   % \item GRE (\textit{September 2011}): 170 Verbal (99th percentile), 168
+   %       Quantitative (96th percentile), 4.5 Analytical Writing (72nd
+   %       percentile)
+ \end{itemize}}
+
+\cventry
+{Aug.\ 2002--May 2006}
+{B.S.}
+{University of Virginia}
+{Charlottesville, VA}
+{\textit{Physics}}
+{Distinguished major in physics, concentration in computational physics, and
+ minor in anthropology.
+ \begin{itemize}
+   \item Studies included C/C++ programming for analysis and simulation of
+         physical systems.
+   \item Senior thesis examined the dynamics of shear transformation zones in
+         amorphous solids via numerical simulation.
+   % \item Dean's List: Spring 2003, Fall 2003, Spring 2004, Spring 2005.
+ \end{itemize}}
+
+\section{Work Experience} % ---------------------------------------------------
+
+\cventry
+{Jun. 2016--\textit{present}}
+{Intern--R\&D Engineering}
+{Shazam}
+{Redwood City, CA}
+{}
+{\begin{itemize}
+   \item Trained neural net to intelligently reduce network and server load
+         with minimal user impact, leading to significant cost savings and
+         increased reliability.
+   \item Developed unsupervised ML system, leveraging a massive
+         set of proprietary data, to characterize any song (\textit{e.g.}\ by
+         genre).
+ \end{itemize}}
+
+\cventry
+{May 2014--Aug.\ 2014}
+{Intern--Audio Software Engineering}
+{Apple}
+{Cupertino, CA}
+{}
+{\begin{itemize}
+   \item Developed an efficient solution to a user-facing audio
+         interaction, leveraging the expertise and buy-in of multiple teams,
+         which was deployed to millions of devices.
+ \end{itemize}}
+
+\cventry
+{Jun.\ 2013--Sep.\ 2013}
+{Intern--Audio DSP Engineering}
+{Sennheiser Research}
+{San Francisco, CA}
+{}
+{\begin{itemize}
+   \item Developed object-oriented AutoMixer in Matlab, optimizing efficiency,
+         agility, and ease of use.
+   \item Researched DSP concepts, mainly compressed sensing; work included
+         numerous Matlab experiments and simulations.
+   \item Contributed to proprietary Matlab codebase, adhering to coding
+         standards and guidelines.
+ \end{itemize}}
+
+\cventry
+{Sep.\ 2006--Aug.\ 2012}
+{Equity Research Assistant}
+{J.P.\ Morgan Chase}
+{New York, NY}
+{}
+{\begin{itemize}
+   \item Partnered with department management to analyze expenses and make
+         recommendations for expense savings; led training on new automated and
+         web-based systems to achieve significant cost savings during the
+         financial crisis.
+   \item Identified and gathered key metrics for research publications and to
+         fulfill client requests.
+ \end{itemize}}
+
+% \section{Musical Experience}
+% \cventry{Summers 2003--2005, 2006--2012}{suiGeneris}{Bandleader}{New York, NY}{Limehead}{Composed, performed, and recorded original musical works as leader of a progressive, alternative metal group at numerous venues throughout New York City. U.S.\ finalist in the international Emergenza battle of the bands competition. Produced numerous studio recordings of original material. Selected performance venues: Webster Hall, The Bitter End, Fat Baby, Don Hill's, CBGB.}
+% %\cventry{2010--2011}{Um}{Guitarist}{New York, New York}{Who's RVZ?}{Lead guitarist for Brooklyn and Manhattan-based indie rock band \textit{Um}; sole guitarist for \textit{Who's RVZ?}, performing deep cuts from Van Halen, Led Zeppelin, and The Who at venues in Manhattan and Queens, New York.}
+
+\section{Additional}
 \begin{itemize}
-\item Studies include digital signal processing, computer music composition, and human-computer interaction design
-\item Research projects include complex system simulation for computer improvisation and real-time generative algorithmic composition
-\item Current GPA: 4.133/4.3
-\item GRE (\textit{September 2011}): 170 Verbal (99th percentile), 168 Quantitative (96th percentile), 4.5 Analytical Writing (72nd percentile)
-\end{itemize}}
-
-\cventry{August 2002--May 2006}{B.S.}{University of Virginia}{Charlottesville, Virginia}{\textit{Physics}}{
-Distinguished major in physics, concentration in computational physics, and minor in anthropology.
-\begin{itemize}
-\item Studies included C/C++ programming for analysis and simulation of physical systems.
-\item Senior thesis examining the dynamics of shear transformation zones in amorphous solids via numerical simulation.
-\item Dean's List: Spring 2003, Fall 2003, Spring 2004, Spring 2005.
-\end{itemize}}
-
-
-\section{Work Experience}
-\cventry{Jun. 2013--Sep. 2013}{Intern--Audio DSP Engineering}{Sennheiser Research}{San Francisco, California}{}{\begin{itemize}
-\item Developed object-oriented AutoMixer in Matlab, optimizing efficiency, agility, and ease of use
-\item Researched DSP concepts, mainly compressed sensing; work included numerous Matlab experiments and simulations
-\item Contributed to proprietary Matlab codebase, adhering to coding standards and guidelines
+  \item Avid guitar player and composer.
+  \item Lead guitarist for two alternative metal bands that performed original works at venues throughout New York City.
+  % \item U.S. finalist in international Emergenza battle of the bands competition.
 \end{itemize}
-}
-
-\cventry{Nov. 2006--Aug. 2012}{Equity Research Assistant}{J.P. Morgan Chase}{New York, New York}{}{\begin{itemize}
-\item Partnered with department management to analyze expenses and make recommendations for expense savings; led training on new automated and web-based systems to achieve significant cost savings during the financial crisis
-\item Coordinated with corporate investment bank clients, institutional investors, and national J.P. Morgan offices to organize industry conferences and corporate access events
-\item Updated, published, and distributed weekly valuation comparison databases for several sectors
-\item Identified and gathered key metrics for research publications and to fulfill client requests
-\item Member of several top \textit{Institutional Investor}-ranked research teams; reported to three Executive Directors, one Vice President, and three Associates.\
-\end{itemize}
-}
-\vspace{-11px}
-\cventry{Sep. 2006--Nov. 2006}{Technology Consultant}{}{}{}{\begin{itemize}
-\item Facilitated the consolidation of all J.P. Morgan Equity Research Analysts' contact lists into a global database system using Microsoft Access and Excel and utilizing knowledge of SQL and Visual Basic
-\item Liaised with analysts and database architects to ensure a smooth rollout of the contact management product
-\end{itemize}}
-
-\section{Musical Experience}
-\cventry{Summers 2003--2005, 2006--2012}{suiGeneris}{Bandleader}{New York, New York}{Limehead}{Composed, performed, and recorded original musical works as leader of a progressive, alternative metal group at numerous venues throughout New York City. U.S. finalist in the international Emergenza battle of the bands competition. Produced numerous studio recordings of original material. Selected performance venues: Webster Hall, The Bitter End, Fat Baby, Don Hill's, CBGB.}
-%\cventry{2010--2011}{Um}{Guitarist}{New York, New York}{Who's RVZ?}{Lead guitarist for Brooklyn and Manhattan-based indie rock band \textit{Um}; sole guitarist for \textit{Who's RVZ?}, performing deep cuts from Van Halen, Led Zeppelin, and The Who at venues in Manhattan and Queens, New York.}
 
 \section{Skills}
-\begin{minipage}[t]{0.55\linewidth}
-\cvitem{Programming}{Matlab, C, C++, Python, Processing}
-\cvitem{DSP}{SuperCollider, PureData, ChucK, JACK}
-\cvitem{Systems}{Linux, Bash, Vim, Git, Shell Scripting}
+\begin{minipage}[t]{0.50\linewidth}
+  \cvitem{Programming}{Python, C, C++, Matlab, \textit{etc.}}
+  \cvitem{ML Libraries}{Keras, TensorFlow, PyTorch}
 \end{minipage}
-\begin{minipage}[t]{0.45\linewidth}
-\cvitem{Applications}{Audacity, Ardour, GIMP, etc.}
-\cvitem{Web Technologies}{HTML, CSS, Jekyll, Joomla}
+\begin{minipage}[t]{0.50\linewidth}
+  \cvitem{DSP}{Audacity, Ardour, Faust, SuperCollider, PD, ChucK}
+  \cvitem{Misc.}{Linux, Bash, Vim, Git}
+  % \cvitem{Applications}{\textit{etc.}}
+  % \cvitem{Web Technologies}{HTML, CSS, Jekyll, Pelican}
 \end{minipage}
 
 
